@@ -30,7 +30,6 @@ class Parser
 
                 // If no events, save the day and stop the iteration
                 if (trim($eventData->nodeValue) == '') {
-                    $calendarEvents[$date] = $calendarEvent;
                     continue;
                 }
 
