@@ -45,25 +45,39 @@ $elements = $xpath->query("//div[contains(@class, 'veckodagar')]");
 
 $calendarEvents = [];
 
+//Loop through days element
 foreach ($elements as $key => $element) {
     $date = $element->getAttribute('id');
 
-    //echo $element->ownerDocument->saveHTML($element);
-
+    // Get the events
     foreach ($xpath->query("div[contains(@class, 'schemalista')]", $element) as $eventData) {
         $calendarEvent = ["date" => $date];
 
-        // If no events
+        // If no events, save the day and stop the iteration
         if (trim($eventData->nodeValue) == '') {
             $calendarEvents[] = $calendarEvent;
-
             continue;
         }
 
+        // Extract title
         $titles = $xpath->query("//h3", $eventData);
 
         $calendarEvent["title"] = $titles->item(0)->nodeValue;
 
+        // Extract Start time
+        $spanStartTime = $xpath->query("//span[contains(@class, 'starttid')]", $eventData);
+
+        $calendarEvent["startTime"] = $spanStartTime->item(0)->nodeValue;
+
+        // Extract stop time
+        $spanStopTime = $xpath->query("//span[contains(@class, 'stopptid')]", $eventData);
+
+        $calendarEvent["stopTime"] = $spanStopTime->item(0)->nodeValue;
+
+
+        echo $htmlDoc->saveHTML($eventData);
+
+        // Add the event to the calendar
         $calendarEvents[] = $calendarEvent;
 
     }
