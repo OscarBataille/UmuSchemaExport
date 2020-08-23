@@ -7,11 +7,17 @@ require __DIR__ . '/vendor/autoload.php';
 
 use GuzzleHttp\Psr7\Request;
 
+if(!isset($argv[1])){
+    die("You need to specifiy the Kurskod");
+}
+if(!isset($argv[2])){
+    die("You need to specifiy the Instanskod");
+}
 $client = new GuzzleHttp\Client();
 
 $currentDate    = strtotime("last Monday - 1 day");
 $calendarEvents = [];
-$endDate        = strtotime("2020-12-25");
+$endDate        = strtotime("+1 year");
 
 while ($currentDate < $endDate) {
     $dayPreviousWeek   = (string) date("d", $currentDate);
@@ -22,8 +28,8 @@ while ($currentDate < $endDate) {
 
         'form_params' => [
             "btn"                            => "v+",
-            "Kurskoder"                      => "2KG052",
-            "Instanskoder"                   => "29030HT20",
+            "Kurskoder"                      => $argv[1],
+            "Instanskoder"                   => $argv[2],
             "Year"                           => $yearPreviousWeek,
             "Month"                          => $monthPreviousWeek,
             "Day"                            => $dayPreviousWeek,
@@ -31,12 +37,12 @@ while ($currentDate < $endDate) {
             "ValdDag"                        => "-1",
             "PreviewPage"                    => "",
             "Manadsvy"                       => "False",
-            "Kurser[0].Namn"                 => "Sveriges sociala geografi, 7.5 hp",
-            "Kurser[0].Instanskod"           => "29030HT20",
-            "Kurser[0].FargClass"            => "farg_0",
-            "Kurser[0].AlternativSchemalank" => "",
-            "Kurser[0].HarPubliceratSchema"  => "True",
-            "Kurser[0].AntalValdaGrupper"    => "0",
+            "Kurser[0].Instanskod"           => $argv[2],
+            // "Kurser[0].Namn"                 => "Sveriges sociala geografi, 7.5 hp",
+            // "Kurser[0].FargClass"            => "farg_0",
+            // "Kurser[0].AlternativSchemalank" => "",
+            // "Kurser[0].HarPubliceratSchema"  => "True",
+            // "Kurser[0].AntalValdaGrupper"    => "0",
             "Kurser[0].Vald"                 => "true",
             "X-Requested-With"               => "XMLHttpRequest",
         ],
@@ -49,6 +55,8 @@ while ($currentDate < $endDate) {
     $currentDate = strtotime("+1 week", $currentDate);
 }
 
+
+// var_dump($calendarEvents);
 
 // Ical generation
 $vCalendar = new \Eluceo\iCal\Component\Calendar('SverigesSocialaGeografi');

@@ -8,4 +8,7 @@ Scrape Umeå university calendar and export it as an iCalendar.
 # Usage 
 Modify the calendar configuration in src/index.php.
 
-```php index.php > ical.ics```
+```php index.php [Kurskod] [Instanskod] > ical.ics```
+
+Example: 
+```php index.php  2KG052 29030HT20```
