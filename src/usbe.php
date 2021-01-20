@@ -17,14 +17,13 @@ $response = $client->request('GET',
     'http://www.hh.umu.se/usbeweb/fek/schema/schema.php',
     ['query' => [
         'ID' => $argv[1],
-        ],
+    ],
     ]);
 
 $body = (string) $response->getBody();
 
 // FORCE UTF8 for XPath
-$calendarEvents = App\USBEParser::parse('<?xml version="1.0" encoding="utf-8"?>'. "\n" .$body);
-
+$calendarEvents = App\USBEParser::parse('<?xml version="1.0" encoding="utf-8"?>' . "\n" . $body);
 
 // Ical generation
 $vCalendar = new \Eluceo\iCal\Component\Calendar(App\USBEParser::getTitle($body));
@@ -33,23 +32,30 @@ foreach ($calendarEvents as $event) {
 
     $vEvent = new \Eluceo\iCal\Component\Event();
 
-    $start     = new \DateTime($event["date"]);
-    $timeStart = explode(':', $event["startTime"]);
-    $start->setTime((int) $timeStart[0], (int) $timeStart[1]);
+    // If no start time
+    if (empty($event['startTime'])) {
 
+        $vEvent->setNoTime(true);
+
+    } else {
+        $start     = new \DateTime($event["date"]);
+        $timeStart = explode(':', $event["startTime"]);
+        $start->setTime((int) $timeStart[0], (int) $timeStart[1]);
+    }
     $stop     = new \DateTime($event["date"]);
     $timeStop = explode(':', $event["stopTime"]);
-    $stop->setTime((int)$timeStop[0], (int) $timeStop[1]);
+    $stop->setTime((int) $timeStop[0], (int) $timeStop[1]);
 
-    $description = $event['moreInfo']  . PHP_EOL.$event['location'] . PHP_EOL .$event['teacher']; 
-
-    
     $vEvent
         ->setDtStart($start)
-        ->setDtEnd($stop)
+        ->setDtEnd($stop);
+
+    $description = $event['moreInfo'] . PHP_EOL . $event['location'] . PHP_EOL . $event['teacher'];
+
+    $vEvent
         ->setSummary($event["title"])
         ->setDescription($description);
-
+        //->setLocation($event['location'])
 
     $vCalendar->addComponent($vEvent);
 }

@@ -37,7 +37,7 @@ class USBEParser
 
             //Get nextSiblings of activity for location and teacher
             $locationSel       = $xpath->query('.//div[@id="activity"]//following-sibling::div[1]//p', $row);
-            $event['location'] = $locationSel->item(0)->textContent;
+            $event['location'] = $locationSel->item(0)->lastChild->textContent;
 
             
             $teacherSel       = $xpath->query('.//div[@id="activity"]//following-sibling::div[2]//p', $row);
