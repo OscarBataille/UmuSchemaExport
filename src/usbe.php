@@ -41,14 +41,15 @@ foreach ($calendarEvents as $event) {
     $timeStop = explode(':', $event["stopTime"]);
     $stop->setTime((int)$timeStop[0], (int) $timeStop[1]);
 
-    $description = $event['moreInfo'] . PHP_EOL . $event["location"] . PHP_EOL . $event['teacher'] . PHP_EOL; 
+    $description = $event['moreInfo']  . PHP_EOL.$event['location']; 
 
     
     $vEvent
         ->setDtStart($start)
         ->setDtEnd($stop)
         ->setSummary($event["title"])
-        ->setDescription($description);
+        ->setDescription($description)
+        ->setOrganizer(new Eluceo\iCal\Property\Event\Organizer($event['teacher']));
 
 
     $vCalendar->addComponent($vEvent);

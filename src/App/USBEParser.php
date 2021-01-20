@@ -41,7 +41,7 @@ class USBEParser
 
             
             $teacherSel       = $xpath->query('.//div[@id="activity"]//following-sibling::div[2]//p', $row);
-            $event['teacher'] = $teacherSel->item(0)->textContent;
+            $event['teacher'] = $teacherSel->item(0)->lastChild->textContent;
 
 
             $calendarEvents[] = $event;
