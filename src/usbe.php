@@ -41,7 +41,7 @@ foreach ($calendarEvents as $event) {
     $timeStop = explode(':', $event["stopTime"]);
     $stop->setTime((int)$timeStop[0], (int) $timeStop[1]);
 
-    $description = $event['moreInfo'] . " " . $event["location"] . " ". $event['teacher'] . PHP_EOL; 
+    $description = $event['moreInfo'] . PHP_EOL . $event["location"] . PHP_EOL . $event['teacher'] . PHP_EOL; 
 
     
     $vEvent
