@@ -32,16 +32,10 @@ foreach ($calendarEvents as $event) {
 
     $vEvent = new \Eluceo\iCal\Component\Event();
 
-    // If no start time
-    if (empty($event['startTime'])) {
+    $start     = new \DateTime($event["date"]);
+    $timeStart = explode(':', $event["startTime"]);
+    $start->setTime((int) $timeStart[0], (int) $timeStart[1]);
 
-        $vEvent->setNoTime(true);
-
-    } else {
-        $start     = new \DateTime($event["date"]);
-        $timeStart = explode(':', $event["startTime"]);
-        $start->setTime((int) $timeStart[0], (int) $timeStart[1]);
-    }
     $stop     = new \DateTime($event["date"]);
     $timeStop = explode(':', $event["stopTime"]);
     $stop->setTime((int) $timeStop[0], (int) $timeStop[1]);
