@@ -22,7 +22,8 @@ $response = $client->request('GET',
 
 $body = (string) $response->getBody();
 
-$calendarEvents = App\USBEParser::parse($body);
+// FORCE UTF8 for XPath
+$calendarEvents = App\USBEParser::parse('<?xml version="1.0" encoding="utf-8"?>'. "\n" .$body);
 
 
 // Ical generation

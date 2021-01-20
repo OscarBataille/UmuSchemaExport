@@ -21,14 +21,14 @@ class USBEParser
             $event = [];
 
             $activity       = $xpath->query('.//div[@id="activity"]//p', $row);
-            $event['title'] = $activity->item(0)->textContent;
+            $event['title'] = $activity->item(0)->lastChild->textContent;
+
 
             $date          = $xpath->query('.//div[@id="date"]//p', $row);
-            $event['date'] = explode(' ', $date->item(0)->textContent)[1];
-
+            $event['date'] = $date->item(0)->lastChild->textContent;
 
             $time               = $xpath->query('.//div[@id="time"]//p', $row);
-            $event['time']      = explode(' ', $time->item(0)->textContent)[1];
+            $event['time']      = $time->item(0)->lastChild->textContent;
             $event['startTime'] = explode('-', $event['time'])[0];
             $event['stopTime']  = explode('-', $event['time'])[1];
 
