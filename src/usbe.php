@@ -50,12 +50,12 @@ foreach ($calendarEvents as $event) {
         ->setDtStart($start)
         ->setDtEnd($stop);
 
-    $description = $event['moreInfo'] . PHP_EOL . $event['location'] . PHP_EOL . $event['teacher'];
+    $description = $event['moreInfo'] . PHP_EOL . $event['teacher'];
 
     $vEvent
+        ->setLocation($event['location'])
         ->setSummary($event["title"])
         ->setDescription($description);
-        //->setLocation($event['location'])
 
     $vCalendar->addComponent($vEvent);
 }
