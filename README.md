@@ -26,9 +26,18 @@ You can also scrape USBE calendar and export it as an iCalendar.
 
 ### Usage
 
-1. Get the ID of the calendar from the URL, or use ```bash tools/findUSBESchemaID.sh [Kurskod]``` to find the calendar ID for a specific course.
-Eg: ```http://www.hh.umu.se/usbeweb/fek/schema/schema.php?ID=2366``` the ID is 2366
+1. Get the ID of the calendar from the URL, or use 
+```console
+bash tools/findUSBESchemaID.sh [Kurskod]
+``` 
+to find the calendar ID for a specific course.
+Eg: ```[http://www.hh.umu.se/usbeweb/fek/schema/schema.php?ID=2366]``` the ID is 2366
 
-2. Run ```php src/usbe.php [ID]``` 
-Eg: ```php src/usbe.php 2366 > generated/financialAccounting.ics``` to export the calendar with ID 2366 to generate/financialAccounting.ics
+2. Run ```console
+php src/usbe.php [ID]
+``` 
+Eg: ```console 
+php src/usbe.php 2366 > generated/financialAccounting.ics
+``` 
+to export the calendar with ID 2366 to ```generate/financialAccounting.ics```
 3. Import the ics to your calendar.
