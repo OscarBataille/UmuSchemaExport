@@ -10,15 +10,15 @@ Scrape Umeå university calendar and export it as an iCalendar.
 ![Image](/static/Schedule.png)
 
 ### Usage 
-Modify the calendar configuration in ```src/index.php```.
-
+1. Modify the calendar configuration in ```src/index.php```.
+2. Execute the tool:
 ```console
-php index.php [Kurskod] [Instanskod] > ical.ics
+oscar@computer:~/UmuSchemaExport$ php src/index.php [Kurskod] [Instanskod] > ical.ics
 ```
 
 Example: 
 ```console
-php index.php  2KG052 29030HT20
+oscar@computer:~/UmuSchemaExport$ php src/index.php  2KG052 29030HT20
 ```
 
 
@@ -36,7 +36,7 @@ Eg: ```[http://www.hh.umu.se/usbeweb/fek/schema/schema.php?ID=2366]``` the ID is
 
  Or from the Course Code/Kurskod
 ```console
-./tools/findUSBESchemaID.sh [Kurskod]
+oscar@computer:~/UmuSchemaExport$ ./tools/findUSBESchemaID.sh [Kurskod]
 ``` 
 to find the calendar ID for a specific course.
 Eg:
@@ -51,7 +51,7 @@ php src/usbe.php [ID]
 ```
 Eg:
 ```console 
-php src/usbe.php 2366 > generated/financialAccounting.ics
+oscar@computer:~/UmuSchemaExport$ php src/usbe.php 2366 > generated/financialAccounting.ics
 ``` 
 to export the calendar with ID 2366 to ```generate/financialAccounting.ics```
 3. Import the ics to your calendar.
