@@ -56,4 +56,5 @@ oscar@computer:~/UmuSchemaExport$ php src/usbe.php [ID]
 oscar@computer:~/UmuSchemaExport$ php src/usbe.php 2366 > generated/financialAccounting.ics
 ``` 
 to export the calendar with ID 2366 to ```generate/financialAccounting.ics```
+
 3. Import the ics to your calendar.
