@@ -1,5 +1,8 @@
 # UmuSchemaExport
-
+Collection of tools to scrape calendars from different sources at Umeå Universitet and export them as iCalendar.
+Currently supported:
+- Online calendar
+- Umeå School of Business and Economics  (USBE) schema website
 ## Online calendar
 Scrape Umeå university calendar and export it as an iCalendar.
 
@@ -18,12 +21,14 @@ Example:
 ## USBE calendar
 You can also scrape USBE calendar and export it as an iCalendar.
 
-```php src/usbe.php [ID]```
+
 ![Image](/static/USBE.png)
 
-### Steps
+### Usage
+
 1. Get the ID of the calendar from the URL, or use ```bash tools/findUSBESchemaID.sh [Kurskod]``` to find the calendar ID for a specific course.
 Eg: ```http://www.hh.umu.se/usbeweb/fek/schema/schema.php?ID=2366``` the ID is 2366
 
-2. Run ```php src/usbe.php 2366 > generated/financialAccounting.ics``` to export the calendar with ID 2366 to generate/financialAccounting.ics
+2. Run ```php src/usbe.php [ID]``` 
+Eg: ```php src/usbe.php 2366 > generated/financialAccounting.ics``` to export the calendar with ID 2366 to generate/financialAccounting.ics
 3. Import the ics to your calendar.
