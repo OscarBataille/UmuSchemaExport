@@ -31,25 +31,27 @@ You can also scrape USBE calendar and export it as an iCalendar.
 ### Usage
 
 1. Get the ID of the calendar.
-- Either from the URL:
-Eg: ```[http://www.hh.umu.se/usbeweb/fek/schema/schema.php?ID=2366]``` the ID is 2366.
+- Either from the URL: ```[http://www.hh.umu.se/usbeweb/fek/schema/schema.php?ID=2366]``` the ID is 2366.
 
-- Or from the Course Code/Kurskod to find the calendar ID for a specific course. 
+- Or use ```./tools/findUSBESchemaID.sh``` from the Course Code/Kurskod to find the calendar ID for a specific course. 
 ```console
 oscar@computer:~/UmuSchemaExport$ ./tools/findUSBESchemaID.sh [Kurskod]
 ``` 
 
-Eg for the coursecode 2FE096, one schema (2366) has been found.
+
+
+**Example**: for the coursecode 2FE096, one schema (2366) has been found.
 ```console
 oscar@computer:~/UmuSchemaExport$ ./tools/findUSBESchemaID.sh 2FE096
 2366
 ``` 
 
+
 2. Scrape and convert the data to an iCalendar file. The file is outputed to stdout. 
 ```console
 oscar@computer:~/UmuSchemaExport$ php src/usbe.php [ID]
 ```
-Example:
+**Example**:
 ```console 
 oscar@computer:~/UmuSchemaExport$ php src/usbe.php 2366 > generated/financialAccounting.ics
 ``` 
