@@ -47,7 +47,7 @@ oscar@computer:~/UmuSchemaExport$ ./tools/findUSBESchemaID.sh 2FE096
 
 2. Scrape and convert the data to an iCalendar file. The file is outputed to stdout. 
 ```console
-php src/usbe.php [ID]
+oscar@computer:~/UmuSchemaExport$ php src/usbe.php [ID]
 ```
 Eg:
 ```console 
