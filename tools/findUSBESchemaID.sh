@@ -7,7 +7,7 @@ fi
 
 for i in {2300..4000}
 do
- if curl -f -s  http://www.hh.umu.se/usbeweb/fek/schema/schema.php?ID=$i | grep -q $1
+ if curl -f -s  http://www.hh.umu.se/usbeweb/fek/schema/schema.php?ID=$i | grep -iq $1
  then echo $i
 fi
 done
