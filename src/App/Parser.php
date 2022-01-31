@@ -22,7 +22,9 @@ class Parser
             $date = $element->getAttribute('id');
 
             // Get the events
-            foreach ($xpath->query(".//div[contains(@class, 'schemalista')]", $element) as $eventData) {
+            foreach ($xpath->query(".//div[contains(@class, 'schemahandelse')]", $element) as $eventData) {
+
+                
 
                 // echo $htmlDoc->saveHTML($eventData);
 
@@ -35,7 +37,7 @@ class Parser
 
                 // Extract title
                 $titles = $xpath->query(".//h3", $eventData);
-
+                
                 $calendarEvent["title"] = $titles->item(0)->nodeValue;
 
                 // Extract Start time
@@ -67,7 +69,7 @@ class Parser
                 }
 
                 // Add the event to the calendar
-                $calendarEvents[$date] = $calendarEvent;
+                $calendarEvents[] = $calendarEvent;
 
             }
 
