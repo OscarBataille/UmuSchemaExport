@@ -1,0 +1,204 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:SverigesSocialaGeografi
+BEGIN:VEVENT
+UID:61f78d1f42539
+DTSTART:20220125T121500Z
+SEQUENCE:0
+TRANSP:OPAQUE
+DTEND:20220125T140000Z
+SUMMARY:Introduction to Swedish Law
+CLASS:PUBLIC
+DESCRIPTION:Lecture \nTeacher: Lisa Claar\nContent: Lecture: Individual rig
+ hts under the constitution\n https://umu.zoom.us/j/63564915266\n
+DTSTAMP:20220131T071751Z
+END:VEVENT
+BEGIN:VEVENT
+UID:61f78d1f426d7
+DTSTART:20220127T091500Z
+SEQUENCE:0
+TRANSP:OPAQUE
+DTEND:20220127T110000Z
+SUMMARY:Introduction to Swedish Law
+CLASS:PUBLIC
+DESCRIPTION:Seminar \nTeacher: Lisa Claar\nContent: Seminar: Individual rig
+ hts under the constitution\nSeminar group B\n\n https://umu.zoom.us/j/6687
+ 7092111\nTeacher: Lisa Claar\nContent: Seminar: Individual rights under th
+ e constitution\nSeminar group A\n\nhttps://umu.zoom.us/j/62295694206\n
+DTSTAMP:20220131T071751Z
+END:VEVENT
+BEGIN:VEVENT
+UID:61f78d1f426e8
+DTSTART:20220201T121500Z
+SEQUENCE:0
+TRANSP:OPAQUE
+DTEND:20220201T141000Z
+SUMMARY:Introduction to Swedish Law
+CLASS:PUBLIC
+DESCRIPTION:Lecture S Hörsal S213\nTeacher: Maria Eklund\nContent: Lecture
+ : Contract law\n
+DTSTAMP:20220131T071751Z
+END:VEVENT
+BEGIN:VEVENT
+UID:61f78d1f426f8
+DTSTART:20220203T071500Z
+SEQUENCE:0
+TRANSP:OPAQUE
+DTEND:20220203T090000Z
+SUMMARY:Introduction to Swedish Law
+CLASS:PUBLIC
+DESCRIPTION:Seminar HC205\nTeacher: Maria Eklund\nContent: Seminar: Agency 
+ and Contract law\nSeminar group A\nTeacher: Maria Eklund\nContent: Seminar
+ : Agency and Contract law\nSeminar group B\n
+DTSTAMP:20220131T071751Z
+END:VEVENT
+BEGIN:VEVENT
+UID:61f78d1f42707
+DTSTART:20220208T121500Z
+SEQUENCE:0
+TRANSP:OPAQUE
+DTEND:20220208T140000Z
+SUMMARY:Introduction to Swedish Law
+CLASS:PUBLIC
+DESCRIPTION:Lecture H Hörsal F\nTeacher: Maria Eklund\nContent: Lecture: S
+ ales Law and Consumer Law\n
+DTSTAMP:20220131T071751Z
+END:VEVENT
+BEGIN:VEVENT
+UID:61f78d1f42716
+DTSTART:20220210T071500Z
+SEQUENCE:0
+TRANSP:OPAQUE
+DTEND:20220210T090000Z
+SUMMARY:Introduction to Swedish Law
+CLASS:PUBLIC
+DESCRIPTION:Seminar HC205\nTeacher: Maria Eklund\nContent: Seminar: Sales L
+ aw and Consumer Law\nSemianr group B\nTeacher: Maria Eklund\nContent: Semi
+ nar: Sales Law and Consumer Law\nSemianr group A\n
+DTSTAMP:20220131T071751Z
+END:VEVENT
+BEGIN:VEVENT
+UID:61f78d1f42724
+DTSTART:20220215T091500Z
+SEQUENCE:0
+TRANSP:OPAQUE
+DTEND:20220215T110000Z
+SUMMARY:Introduction to Swedish Law
+CLASS:PUBLIC
+DESCRIPTION:Lecture Hörsal UB.A.230 - Lindellhallen 3\nTeacher: Åsa Alfve
+ ngren\nContent: Lecture: Law of Business Organizations\nTeacher: Örjan Ed
+ ström\nContent: Lecture: Labour law\n
+DTSTAMP:20220131T071751Z
+END:VEVENT
+BEGIN:VEVENT
+UID:61f78d1f42733
+DTSTART:20220217T091500Z
+SEQUENCE:0
+TRANSP:OPAQUE
+DTEND:20220217T110000Z
+SUMMARY:Introduction to Swedish Law
+CLASS:PUBLIC
+DESCRIPTION:Seminar Hörsal NAT.D.300\nTeacher: Örjan Edström\nContent: S
+ eminar: Labour law\nSeminar group A\nTeacher: Örjan Edström\nContent: Se
+ minar: Labour law\nSeminar group B\n
+DTSTAMP:20220131T071751Z
+END:VEVENT
+BEGIN:VEVENT
+UID:61f78d1f42742
+DTSTART:20220222T091500Z
+SEQUENCE:0
+TRANSP:OPAQUE
+DTEND:20220222T110000Z
+SUMMARY:Introduction to Swedish Law
+CLASS:PUBLIC
+DESCRIPTION:Lecture Hörsal MIT.A.121\nTeacher: Maria Eklund\nContent: Lect
+ ure: Debtors and Creditors\n
+DTSTAMP:20220131T071751Z
+END:VEVENT
+BEGIN:VEVENT
+UID:61f78d1f42751
+DTSTART:20220224T091500Z
+SEQUENCE:0
+TRANSP:OPAQUE
+DTEND:20220224T110000Z
+SUMMARY:Introduction to Swedish Law
+CLASS:PUBLIC
+DESCRIPTION:Seminar S207\nTeacher: Maria Eklund\nContent: Seminar: Debtors 
+ and Creditors\nSeminar group B\nTeacher: Maria Eklund\nContent: Seminar: D
+ ebtors and Creditors\nSeminar group A\n
+DTSTAMP:20220131T071751Z
+END:VEVENT
+BEGIN:VEVENT
+UID:61f78d1f4275f
+DTSTART:20220301T071500Z
+SEQUENCE:0
+TRANSP:OPAQUE
+DTEND:20220301T090000Z
+SUMMARY:Introduction to Swedish Law
+CLASS:PUBLIC
+DESCRIPTION:Lecture Hörsal UB.A.230 - Lindellhallen 3\nTeacher: Jennifer E
+ dlund\nContent: Lecture: Civil Procedural Law and Arbitration.\nTeacher: J
+ ennifer Edlund\nContent: Lecture: Real property law\n
+DTSTAMP:20220131T071751Z
+END:VEVENT
+BEGIN:VEVENT
+UID:61f78d1f4276e
+DTSTART:20220303T071500Z
+SEQUENCE:0
+TRANSP:OPAQUE
+DTEND:20220303T090000Z
+SUMMARY:Introduction to Swedish Law
+CLASS:PUBLIC
+DESCRIPTION:Seminar BET.E.101\nTeacher: Jennifer Edlund\nContent: Seminar: 
+ Real property law\nSeminar group A\nTeacher: Jennifer Edlund\nContent: Sem
+ inar: Real property law\nSeminar group B\n
+DTSTAMP:20220131T071751Z
+END:VEVENT
+BEGIN:VEVENT
+UID:61f78d1f4277c
+DTSTART:20220308T071500Z
+SEQUENCE:0
+TRANSP:OPAQUE
+DTEND:20220308T110000Z
+SUMMARY:Introduction to Swedish Law
+CLASS:PUBLIC
+DESCRIPTION:Lecture Hörsal NAT.D.320\nTeacher: Viola Boström\nContent: Le
+ cture: Family law\n
+DTSTAMP:20220131T071751Z
+END:VEVENT
+BEGIN:VEVENT
+UID:61f78d1f4278b
+DTSTART:20220311T091500Z
+SEQUENCE:0
+TRANSP:OPAQUE
+DTEND:20220311T110000Z
+SUMMARY:Introduction to Swedish Law
+CLASS:PUBLIC
+DESCRIPTION:Seminar S104\nTeacher: Viola Boström\nContent: Seminar: Family
+  law\nSeminar group B\nTeacher: Viola Boström\nContent: Seminar: Family l
+ aw\nSeminar group A\n
+DTSTAMP:20220131T071751Z
+END:VEVENT
+BEGIN:VEVENT
+UID:61f78d1f42799
+DTSTART:20220318T070000Z
+SEQUENCE:0
+TRANSP:OPAQUE
+DTEND:20220318T120000Z
+SUMMARY:Introduction to Swedish Law
+CLASS:PUBLIC
+DESCRIPTION:Examination \n
+DTSTAMP:20220131T071751Z
+END:VEVENT
+BEGIN:VEVENT
+UID:61f78d1f42b15
+DTSTART:20220514T060000Z
+SEQUENCE:0
+TRANSP:OPAQUE
+DTEND:20220514T110000Z
+SUMMARY:Introduction to Swedish Law
+CLASS:PUBLIC
+DESCRIPTION:Re-examination \n
+DTSTAMP:20220131T071751Z
+END:VEVENT
+END:VCALENDAR
